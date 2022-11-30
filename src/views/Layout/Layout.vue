@@ -9,8 +9,8 @@ const toggleDark = useToggle(isDark);
   <header>
     <button @click="toggleDark()">Dark Toggle</button>
     <nav>
-      <router-link active-class="underline text-emerald-300" to="/">Events</router-link>
-      <router-link active-class="underline text-emerald-300" to="/About">About</router-link>
+      <router-link active-class="underline text-emerald-300" :to="{name:'EventList'}">Events</router-link>
+      <router-link active-class="underline text-emerald-300" :to="{name:'About'}">About</router-link>
     </nav>
   </header>
   <main>

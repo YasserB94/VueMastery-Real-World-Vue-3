@@ -8,12 +8,14 @@ defineProps({
 </script>
 
 <template>
-  <div v-if="event.time && event.title" class="event-card">
-    <span class="text-xs text-slate-600 dark:text-slate-300"
-      >@{{ event.time }} on {{ event.date }}</span
-    >
-    <h4>{{ event.title }}</h4>
-  </div>
+  <router-link :to="{ name: 'EventDetails', params: { id: event.id } }">
+    <div v-if="event.time && event.title" class="event-card">
+      <span class="text-xs text-slate-600 dark:text-slate-300"
+        >@{{ event.time }} on {{ event.date }}</span
+      >
+      <h4>{{ event.title }}</h4>
+    </div>
+  </router-link>
 </template>
 
 <style scoped>
